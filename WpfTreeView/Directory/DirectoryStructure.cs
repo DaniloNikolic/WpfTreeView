@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WpfTreeView
 {
@@ -32,7 +29,7 @@ namespace WpfTreeView
                 var fs = Directory.GetFiles(fullPath);
 
                 if (fs.Length > 0)
-                    Items.AddRange(fs.Select(file => new DirectoryItem { FullPath = file, Type = DirectoryItemType.Folder }));
+                    Items.AddRange(fs.Select(file => new DirectoryItem { FullPath = file, Type = DirectoryItemType.File }));
             }
             catch { }
 
